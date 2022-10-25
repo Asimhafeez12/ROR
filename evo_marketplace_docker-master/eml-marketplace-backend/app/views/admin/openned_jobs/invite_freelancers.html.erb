@@ -1,0 +1,22 @@
+
+<%= semantic_form_for resource, url: admin_openned_job_path(resource), builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs "Invite new freelancers" do %>
+    <%= f.input :invite_freelancer, input_html: { id: 'invite_freelancers_input' }  %>
+    <li class='string input optional stringish'>
+      <div id="invited_freelancers_container">
+        <%= f.has_many :invited_user_jobs, new_record: false, heading: '', unique: true do |fd| %>
+          <li class='parent-container'>
+            <%= fd.hidden_field :_destroy, value: true, disabled: true, class: 'delete-field' %>
+            <label>
+              <%= fd.object.user.full_name %>
+              -
+              <%= fd.object.user.email %>
+            </label>
+            <a href="#" class="remove-iv-f">Remove</a>
+          </li>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+  <%= f.action :submit, label: 'Save' %>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @user_certificates, :id, :title, :starting_date, :ending_date, :institution_name, :description, :user_id

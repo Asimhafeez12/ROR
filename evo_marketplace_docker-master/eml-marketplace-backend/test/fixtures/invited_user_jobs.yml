@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  job: one
+  referred_by_admin: false
+
+two:
+  user: two
+  job: two
+  referred_by_admin: false

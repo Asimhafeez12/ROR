@@ -1,0 +1,1 @@
+json.extract! @user_certificate, :id, :title, :starting_date, :ending_date, :institution_name, :description, :user_id

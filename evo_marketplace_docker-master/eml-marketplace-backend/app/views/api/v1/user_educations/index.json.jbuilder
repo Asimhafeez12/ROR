@@ -1,0 +1,1 @@
+json.array! @user_educations, :id, :degree_name, :starting_date, :ending_date, :institute_name, :description, :user_id

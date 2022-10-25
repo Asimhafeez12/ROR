@@ -1,0 +1,1 @@
+json.array! @user_badges, :title, :description, :expert_level, :avatar_url

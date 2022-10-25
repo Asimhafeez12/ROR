@@ -1,0 +1,122 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  notifications:
+    user:
+      approved:
+        "Admin has approved your account"
+      skill:
+        approved:
+          "Admin has approved your added skill"
+      confirmed:
+          "Confirmation email has been resent to your account"
+      badge:
+          "You have been given a badge"
+    job:
+      rejected:
+        "You have been rejected as a freelancer" 
+      open:
+        "Your job offer has been reject by the freelancer. Please review your job offer again"
+      created:
+        "Your job has been posted"
+      update:
+        "Your job has been modified modified"
+      rating:
+        "You have been given rating after job completion"
+      approved:
+        "Admin has approved your posted job"
+      recommended:
+          "You have been recommended for a job"
+      milestone:
+        created:
+          "Job Milestone has been created"
+        closed:
+          "Job Milestone has been approved"
+        approval:
+          "Freelancer has asked for approval of milestone"
+        approved:
+          "Your request for approval of milestone has been entertained"
+        accepted:
+          "Milestone has been accepted by the freelancer"
+        updated:
+          "Milestone has been updated"
+        escrow:
+          agreed:
+            freelancer:
+              "Job Milestone has been agreed by client on escrow"
+            client:
+              "Job Milestone has been agreed by freelancer on escrow"
+          complete:
+            "You have received payment on escrow"
+          ship:
+            client:
+              "Freelancer has submitted the milestone on escrow"
+            freelancer:
+              "You have submitted the milestone on escrow"
+          receive:
+            client:
+              "You have received the milestone on escrow"
+            freelancer:
+              "Client has received the milestone on escrow"
+          accept:
+            client:
+              "You have accepted the milestone and made payment on escrow"
+            freelancer:
+              "Client has accepted the milestone and made payment on escrow"
+          reject:
+            "Client has rejected work from freelancer"
+          payment:
+            approved:
+              freelancer:
+                "Client has funded the milestone on escrow"
+              client:
+                "You have funded the milestone on escrow"
+            rejected:
+              "Job Milestone payment has been rejected on escrow"
+      hired:
+        "You have been hired for the job"
+      active:
+        "Your job offer has been accepted by the freelancer"
+      completed:
+        "The job has been closed successfully"
+      opted:
+        "Your job offer has been sent"
+      received:
+        "You have received a job offer"
+      cover:
+        created:
+          client:
+            "A proposal is received"
+          freelancer:
+            "A proposal is submitted"
+      offered:
+        "Job offer has been sent to the desired freelancer"

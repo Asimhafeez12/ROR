@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+yarn run build
+
+cp -v public/sitemap.xml build/
+for file in build/static/{css,js}/* ; do gzip -9 "$file" ; mv "$file.gz" "$file"; done
+yarn run deploy

@@ -1,0 +1,1 @@
+json.extract! @user_billing, :id, :first_name, :last_name, :country, :zip_code, :city, :address, :send_invoice

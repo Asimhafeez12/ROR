@@ -1,0 +1,7 @@
+$background-colors: #fff;
+$basic-border: 1px solid #e7e7e7;
+
+@mixin grey-box() {
+  background-color: $background-colors;
+  border: $basic-border;
+}
