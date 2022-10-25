@@ -3,3 +3,4 @@ class AddApprovedOnToJobs < ActiveRecord::Migration[5.1]
     add_column :jobs, :approved_on, :datetime
   end
 end
+
