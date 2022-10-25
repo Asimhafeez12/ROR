@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  communication: 1
+  accuracy: 1
+  quality: 1
+  value: 1
+  deadline: 1
+  availability: 1
+  review: MyString
+  user_id: 1
+  job_id: 1
+
+two:
+  communication: 1
+  accuracy: 1
+  quality: 1
+  value: 1
+  deadline: 1
+  availability: 1
+  review: MyString
+  user_id: 1
+  job_id: 1

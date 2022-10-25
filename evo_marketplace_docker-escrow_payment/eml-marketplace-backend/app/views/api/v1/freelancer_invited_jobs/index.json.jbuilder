@@ -1,0 +1,18 @@
+json.array! @invited_jobs.each_with_index do |job, index|
+	json.id(job.id)
+	json.title(job.title)
+	json.description(job.description)
+	json.is_approved(job.is_approved)
+	json.created_at(job.created_at)
+	json.minimum_budget(job.minimum_budget)
+	json.created_at_format(job.created_at_format)
+	json.skill_list(job.skill_list)
+	json.job_category(job.job_category)
+	json.job_category_avatar_url(job.job_category_avatar_url)
+	json.user_id(job.user_id)
+	json.user_full_name(job.user_full_name)
+	json.user_avatar_url(job.user_avatar_url)
+	json.user_country(job.user_country)
+	json.job_client_payment_status(job.job_client_payment_status)
+	json.get_cover_letter get_cover_letter(current_user.id, job.id)
+end

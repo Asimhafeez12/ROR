@@ -1,0 +1,1 @@
+json.client_active_jobs @active_jobs_length

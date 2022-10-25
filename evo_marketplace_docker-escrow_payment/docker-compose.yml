@@ -1,0 +1,57 @@
+version: '3'
+networks:
+  eml_marketplace_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 173.16.238.0/24
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      eml_marketplace_net:
+        ipv4_address: 173.16.238.12
+  redis:
+    image: redis:3.2.4-alpine
+    volumes:
+      - redis:/data
+    command: redis-server --appendonly yes
+    networks:
+      eml_marketplace_net:
+        ipv4_address: 173.16.238.9
+  backend:
+    build:
+      context: eml-marketplace-backend
+    volumes:
+      - ./eml-marketplace-backend:/usr/src/app
+    environment:
+      - DB_HOST=db
+      - RAILS_ENV=development
+      - REDIS_URL=redis://173.16.238.9:6379/1
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    networks:
+      eml_marketplace_net:
+        ipv4_address: 173.16.238.10
+  frontend:
+    build:
+      context: eml-marketplace-frontend
+    volumes:
+      - ./eml-marketplace-frontend:/usr/src/app
+    ports:
+      - "3000:3000"
+    networks:
+      eml_marketplace_net:
+        ipv4_address: 173.16.238.11
+
+volumes:
+  db-data:
+  redis:

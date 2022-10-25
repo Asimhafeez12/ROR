@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EvoMarketplace</title>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      window.currentUser = <%= raw (current_user || {}).to_json %>
+      window.actionCableUrl = '<%= ENV["ACTIONCABLE_URL"] || 'ws://localhost:3000/cable' %>'
+    </script>
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
